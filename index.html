@@ -19,17 +19,28 @@
     <header>
         <!-- Greeting message is filled dynamically using JavaScript -->
         <p id="greeting"></p>
-        <h1>Welcome to Kawthar's Profile</h1>
+        <h1>Welcome to Kawthar's Profile</h1>     
 
         <!-- Navigation (links to page sections) -->
         <nav>
+            <a href="#quote">Quote</a>
             <a href="#aboutMe">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav> 
     </header>
 
-    <!-- About ME section-->
+    <!-- Quote section-->
+    <section id="quote">
+        <h2>An Inspirational Quote for You!</h2>
+        <div class="quoteBox">
+            <p id="quoteText">Click the button to load a quote.</p>
+            <p id="quoteAuthor"></p>
+            <button id="anotherQuoteBtn">Another quote</button>
+            <p id="quoteError"></p>
+        </div>
+    </section>   
+    <!-- About Me section-->
     <section id="aboutMe">
         <h2>About Me</h2>
         <p id="tagline">Software Developer</p>

@@ -107,3 +107,40 @@ emailInput.addEventListener("input", function() {
 messageInput.addEventListener("input", function() {
     formMessage.textContent = "";
 });
+
+// Fetching inspirational quotes
+const quoteText = document.getElementById("quoteText");
+const quoteAuthor = document.getElementById("quoteAuthor");
+const newQuoteBtn = document.getElementById("anotherQuoteBtn");
+const quoteError = document.getElementById("quoteError");
+
+async function loadQuote() {
+    quoteText.textContent = "Loading quote...";
+    quoteAuthor.textContent = "";
+    quoteError.textContent = "";
+
+    try {
+        //fetch the 
+        const response = await fetch("https://dummyjson.com/quotes/random");
+
+        // check the responce 
+        if (!response.ok) {
+            throw new Error("Failed to fetch quote.");
+        }
+
+        const data = await response.json();
+        // show the result 
+        quoteText.textContent = `"${data.quote}"`;
+        quoteAuthor.textContent = `— ${data.author}`;
+    } catch (error) {
+        // handle the error 
+        quoteText.textContent = "No quote available right now.";
+        quoteAuthor.textContent = "";
+        quoteError.textContent = "Sorry, the quote could not be loaded. Please try again.";
+    }
+}
+
+newQuoteBtn.addEventListener("click", loadQuote);
+
+// call the function to load one quote automatically when the page opens
+loadQuote();

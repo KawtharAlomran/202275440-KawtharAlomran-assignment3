@@ -94,6 +94,35 @@ nav a:hover {
     opacity: 0.8; /* Slightly changes transparency when hovering */
 }
 
+/* Quete section */
+.quoteBox {
+    background-color: var(--surface);
+    color: var(--text2);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#quoteText {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+#quoteAuthor {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#quoteError {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+
 /* About Me section*/
 
 /* Styling the short tagline text */
