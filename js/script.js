@@ -69,24 +69,33 @@ form.addEventListener("submit", function(event) {
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
 
+    // Define email regex to check the validatiy of the entered email 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     // Check if the name field is empty
     if (name === "") {
         formMessage.textContent = "Please enter your name.";
     }
+    // Check if the name length is less than 3 characters
+    else if (name.length < 3) {
+        formMessage.textContent = "Name must be at least 3 characters long.";
+    } 
     // Check if the email field is empty
     else if (email === "") {
         formMessage.textContent = "Please enter your email.";
+    }
+    // Check if the email format is valid
+    else if (!emailPattern.test(email)) {
+        formMessage.textContent = "Please enter a valid email address.";
     }
      // Check if the message field is empty
     else if (message === "") {
         formMessage.textContent = "Please enter your message.";
     }
-
-    // Check if the email format is valid
-    else if (!email.includes("@") || !email.includes(".")) {
-        formMessage.textContent = "Please enter a valid email address.";
-    }
-
+    // Check if the message is less than 8 characters
+    else if (message.length < 8) {
+    formMessage.textContent = "Message must be at least 8 characters long.";
+    }       
     // If all inputs are valid, show success message
     else {
         formMessage.textContent = "Your message has been sent successfully!";
