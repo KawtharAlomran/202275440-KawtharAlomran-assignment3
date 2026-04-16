@@ -1,8 +1,20 @@
 :root{
   --bg: #EAE6F2;      /* Main background color of the page */
+  --bg2: white;        /* Secondary background color */
   --surface: #5F3769; /* Color used for cards and sections */
   --text: #2E1B35;     /* Primary text color */
   --text2:#EAE6F2; /* Secondary text color */
+  --fill: #5F3769; /* fiiling color of some content */ 
+}
+
+/* to change the website to dark mode*/
+.dark-mode {
+    --bg: #2E1B35;      /* Dark purple background */
+    --bg2: #574e61; 
+    --surface: #3E2A47; /* Lighter purple */
+    --text: #EAE6F2;    /* Light text */
+    --text2: #EAE6F2;  
+    --fill: #574e61; 
 }
 
 /* General body styling */
@@ -42,6 +54,7 @@ p {
 }
 /* Button styling */
 button {
+    font-family: 'Times New Roman', Times, serif;
     padding: 12px; /* Button inner spacing */
     border-radius: 8px;  /* Rounds the corners */
     border: none;  /* Removes default border */
@@ -51,7 +64,8 @@ button {
     max-width: 240px;   /* Keeps button from being too wide */
     align-self: center;   /* Centers the button inside the form */
     transition: opacity 0.2s ease; /* Add smooth opacity animation */
-    background-color: white;
+    background-color: var( --bg2);
+    color: var( --text); 
 }
 /* Apply hover effect when the mouse moves over a button */
 button:hover {
@@ -73,7 +87,7 @@ button:hover {
   display: block;  /* Makes it behave like a block element (new line) */
   width: 130px; /* Length of the line */
   height: 3px;  /* Thickness of the line */
-  background-color: var(--surface);
+  background-color: var(--fill);
   margin: 10px auto 0;
   border-radius: 2px;  /* Slightly rounds the edges of the line */
 }
@@ -84,10 +98,21 @@ button:hover {
     margin: 10px;
 }
 
+/* Styling the these toggle button */
+#themeToggleBtn {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 8px;
+    width: auto;
+    max-width: 100px;
+    background-color: var(--fill);
+    color: var(--text2);
+}
+
 /* Navigation links styled as buttons */
 nav a {
     text-decoration: none;  /* Removes default underline from links */
-    background-color: var(--surface);   
+    background-color: var(--fill);   
     color: var(--text2);               
     padding: 8px 16px;  /* Adds space inside the button */   
     border-radius: 16px;  /* Rounds the corners */             
@@ -180,7 +205,7 @@ nav a:hover {
     height: 250px;   
     display: block; 
     object-fit: contain;
-    background-color: white; 
+    background-color: var( --bg2); 
     border-radius: 16px; /* Rounds the corners to match card corner rounding*/
 }
 

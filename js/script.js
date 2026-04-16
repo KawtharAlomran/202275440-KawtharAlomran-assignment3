@@ -180,3 +180,28 @@ function updateTimer() {
 updateTimer();
 // Run this function again and again every 1000 milliseconds, which is every second 
 setInterval(updateTimer, 1000);
+
+// Dark mode toggle
+// Getting the button
+const themeBtn = document.getElementById("themeToggleBtn");
+
+// Get saved theme from browser storage (if user selected before)
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    // adds class dark-mode to body so that it uses the dark-mode colors
+    document.body.classList.add("dark-mode");
+}
+
+// Toggle when button is clicked
+themeBtn.addEventListener("click", function() {
+    // Remove dark-mode class if it exists, otherwise add it 
+    document.body.classList.toggle("dark-mode");
+
+    // Save the current theme so it can be remembered after refresh
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
