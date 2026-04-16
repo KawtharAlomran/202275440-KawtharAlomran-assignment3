@@ -77,6 +77,12 @@ button:hover {
   margin: 10px auto 0;
   border-radius: 2px;  /* Slightly rounds the edges of the line */
 }
+/* Styling the timer */
+#timer {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+}
 
 /* Navigation links styled as buttons */
 nav a {

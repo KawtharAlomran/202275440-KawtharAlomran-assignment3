@@ -153,3 +153,30 @@ newQuoteBtn.addEventListener("click", loadQuote);
 
 // call the function to load one quote automatically when the page opens
 loadQuote();
+
+
+// Add timer to show how long the user has been on the site
+const timerElement = document.getElementById("timer");
+
+let secondsSpent = 0;
+
+function updateTimer() {
+    // find the value of hours, minutes and seconds
+    const hours = Math.floor(secondsSpent / 3600);
+    const minutes = Math.floor((secondsSpent % 3600)/ 60);
+    const seconds = secondsSpent % 60;
+
+    // formate numbers to be at least 2 characters long, and add 0 at the beginning if it was less than 2 characters. 
+    const formattedHours = String(hours).padStart(2, "0");
+    const formattedMinutes = String(minutes).padStart(2, "0");
+    const formattedSeconds = String(seconds).padStart(2, "0");
+
+
+    // display the time
+    timerElement.textContent = `Time spent on this site: ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+
+    secondsSpent++;
+}
+updateTimer();
+// Run this function again and again every 1000 milliseconds, which is every second 
+setInterval(updateTimer, 1000);
