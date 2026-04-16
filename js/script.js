@@ -106,16 +106,20 @@ form.addEventListener("submit", function(event) {
 
 // Clear the form message when the user starts typing again to avoid confusion
 nameInput.addEventListener("input", function() {
-    formMessage.textContent = "";
+    clearMessage();
 });
 
 emailInput.addEventListener("input", function() {
-    formMessage.textContent = "";
+    clearMessage();
 });
 
 messageInput.addEventListener("input", function() {
-    formMessage.textContent = "";
+    clearMessage();
 });
+
+function clearMessage() {
+    formMessage.textContent = "";
+}
 
 // Fetching inspirational quotes
 const quoteText = document.getElementById("quoteText");
