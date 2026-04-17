@@ -4,9 +4,10 @@
 
 ## Project Description
 
-This project is a personal portfolio website developed using HTML, CSS, and JavaScript. It showcases personal information, projects, and contact details while demonstrating core front-end development skills.
+This project is a personal portfolio website developed using HTML, CSS, and JavaScript. It showcases personal information, projects, and contact details while demonstrating core and advanced front-end development skills.
 
-The website focuses on clean design, responsive layout, and interactive features to enhance user experience.
+
+The website focuses on clean design, responsive layout, and interactive features, while incorporating dynamic functionality and external integrations to enhance user experience.
 
 ## Features
 
@@ -19,21 +20,26 @@ The website focuses on clean design, responsive layout, and interactive features
 - Success message displayed after form submission
 - Hover effects on buttons, project cards, and navigation links
 - Smooth transitions to improve interactivity and visual feedback
+- Inspirational quote generator using external API
+- Enhanced contact form validation with multiple rules (length checks and email pattern validation)
+- Visitor timer displaying time spent on the website in the format of hours:minutes:seconds
+- Light/Dark mode toggle with user preference saved using localStorage
+- Performance improvements including image optimization and clean code practices
 
 ## Technologies Used
 
 - HTML5
 - CSS3 (Flexbox, transitions, variables)
-- JavaScript (DOM manipulation, event handling)
+- JavaScript (DOM manipulation, event handling, localStorage, API integration)
 
 ## Project Structure
 
 ```text
-202275440-KawtharAlomran-assignment2/
+202275440-KawtharAlomran-assignment3/
 ├── assets/
 │   └── images/
-│       └── File System Visualizer.png
-│       └── Student Schedule Route Visualizer.png
+│       └── File System Visualizer.jpg
+│       └── Student Schedule Route Visualizer.jpg
 ├── css/
 │   └── styles.css
 ├── docs/
@@ -60,13 +66,17 @@ To run the project locally:
 - Click **"Show details"** to view project descriptions
 - Fill out the contact form and submit a message
 - Hover over buttons and cards to see interactive effects
+- Generate inspirational quotes using the quote button
+- Toggle between light and dark mode
+- Observe the timer
 
 ## AI Usage Summary
 
 ChatGPT was used as a support tool for:
 
 - Debugging layout issues
-- Understanding CSS and JavaScript concepts
+- Understanding CSS concepts
+- Understanding JavaScript concepts such as event handling and localStorage
 - Improving code structure and readability
 - Assisting in implementing interactive features
 - Enhancing documentation quality
@@ -75,4 +85,4 @@ A detailed explanation of AI usage is available in `docs/ai-usage-report.md`.
 
 ## Conclusion
 
-This project demonstrates essential front-end development skills, including responsive design, JavaScript interactivity, and user-focused design. It highlights the importance of usability, feedback, and clean code structure in building modern web applications.
+This project demonstrates fundamental and advanced front-end development skills, including responsive design, JavaScript interactivity, user-focused design, API integration, state management, and performance optimization. It highlights the importance of usability, feedback, and clean code structure in building modern web applications.
