@@ -195,6 +195,7 @@ const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
     // adds class dark-mode to body so that it uses the dark-mode colors
     document.body.classList.add("dark-mode");
+    themeBtn.textContent = "Light Mode";
 }
 
 // Toggle when button is clicked
@@ -205,7 +206,9 @@ themeBtn.addEventListener("click", function() {
     // Save the current theme so it can be remembered after refresh
     if (document.body.classList.contains("dark-mode")) {
         localStorage.setItem("theme", "dark");
+        themeBtn.textContent = "Light Mode";
     } else {
         localStorage.setItem("theme", "light");
+        themeBtn.textContent = "Dark Mode";
     }
 });
