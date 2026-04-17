@@ -16,6 +16,10 @@ It was used for:
 - Helping design and implement form validation and user feedback logic.
 - Suggesting improvements for user experience, such as clearing messages when the user starts typing again.
 - Providing guidance for adding hover effects and transitions to improve interactivity.
+- Assisting in integrating an external API to fetch and display inspirational quotes.
+- Explaining how to use localStorage to store and retrieve user preferences (light/dark mode).
+- Guiding the implementation of a timer to track and display time spent on the website.
+- Providing support in understanding performance testing tools such as Lighthouse and interpreting results.
 
 AI assistance was primarily used as a learning and support tool rather than as a direct code generator.
 
@@ -28,6 +32,7 @@ Using AI tool provided several benefits, including:
 - Guidance on structuring documentation properly.
 - Improved clarity and quality of code comments.
 - Assistance in implementing interactive features more efficiently.
+- Helped in understanding and implementing more advanced features such as API integration and state management.
 
 
 Although AI was helpful, there were some limitations:
@@ -35,7 +40,7 @@ Although AI was helpful, there were some limitations:
 - AI sometimes provided solutions that were more complex than necessary for the assignment requirements.
 - Some responses required follow-up questions to obtain more precise guidance, as the initial answers were sometimes too general.
 - Some responses did not fully align with the intended request and required additional clarification.
-
+- AI suggested a timer implementation without hours, which could result in incorrect time display for sessions longer than one hour.
 
 ## Learning Outcomes
 
@@ -47,6 +52,9 @@ Through the use of AI in this assignment, I learned:
 - The importance of reviewing and validating AI-generated suggestions.
 - How to structure documentation clearly and professionally.
 - The importance of asking clear and specific technical questions to receive accurate guidance.
+- How to manage application state using localStorage.
+- How to implement timers and work with time-based logic in JavaScript.
+- How to evaluate website performance using Lighthouse.
 
 
 ## Responsible Use & Modifications
